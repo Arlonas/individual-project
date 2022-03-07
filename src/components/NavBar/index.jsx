@@ -47,8 +47,7 @@ export default function Nav() {
               as={'a'}
               fontSize={'sm'}
               fontWeight={400}
-              variant={'link'}
-              href={'#'}>
+            >
               Sign In
             </Button>
             <Button
@@ -57,7 +56,6 @@ export default function Nav() {
               fontWeight={600}
               color={'white'}
               bg={'pink.400'}
-              href={'#'}
               _hover={{
                 bg: 'pink.300',
               }}>
@@ -70,4 +68,5 @@ export default function Nav() {
     </>
   );
 }
+              
              
