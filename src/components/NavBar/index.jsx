@@ -1,23 +1,15 @@
 // Di chakra ui Box itu seperti div bisa di kasih display flex kalo seperti itu lebih baik 
 // menggunakan stack karena stack itu sama saja seperti box tp di display flex
-
+// kalo mau navbarnya beda pake if ternary di sign in ama sign upnya
+import { Link } from 'react-router-dom'
 
 import {
   Box,
   Flex,
-  Avatar,
-  Link,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
   useColorModeValue,
   Stack,
   useColorMode,
-  Center,
 } from '@chakra-ui/react';
 import { BsSun } from 'react-icons/bs'
 import { HiMoon } from 'react-icons/hi'
@@ -30,10 +22,14 @@ export default function Nav() {
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box>ARA</Box>
+         <Link to={"/"}>
+          <Box>
+            ARA
+          </Box>
+         </Link> 
 
           <Flex alignItems={'center'}>
-            <Stack direction={'row'} spacing={7} paddingRight={9}>
+            <Stack direction={'row'} spacing={7} paddingRight={7}>
               <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <HiMoon /> : <BsSun />}
               </Button>
@@ -43,13 +39,15 @@ export default function Nav() {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
+            <Link style={{textDecoration:'none'}} to='/signin'>
             <Button
-              as={'a'}
               fontSize={'sm'}
               fontWeight={400}
             >
               Sign In
             </Button>
+            </Link>
+            <Link style={{textDecoration:'none'}} to='/signup'>
             <Button
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
@@ -61,6 +59,7 @@ export default function Nav() {
               }}>
               Sign Up
             </Button>
+            </Link>
           </Stack>
           </Flex>
         </Flex>
@@ -68,5 +67,6 @@ export default function Nav() {
     </>
   );
 }
+  
               
              
