@@ -4,11 +4,13 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SignIn from './components/Pages/Signin';
 import Signup from "./components/Pages/Signup";
 import HomePage from "./components/HomePage";
+// import ContentCard from "./components/HomePage/contentcard";
 // bisa kasih ? setelah val kalo error di render listnya atau undefined null itu dibiarin jaa sama fitur ini ?
 // untuk user profile pake dua function untuk render data 
 //function pertama untuk render nama user profile pic smaa bio jumlah post
 //function kedua untuk render post
 // kalo mau navbarnya ikut kasih props children jaa di navbar
+// hr kalo mau ada garis
 function App() {
     return (
       <Box>
